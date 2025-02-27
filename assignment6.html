@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 6</title>
+</head>
+<body>
+<h2>Flight Simulator</h2>
+<p id="shuttle">The shuttle is on the ground</p>
+<p id="mission"></p>
+<button onclick="takeOff()">Take off</button> <button onclick="abort()">Abort Mission</button>
+<script>
+    function takeOff() {
+        document.getElementById("shuttle").innerHTML = "Houston, we have liftoff!"
+    }
+    function abort() {
+      let choice = window.prompt("Are you sure you want to abort the mission?")
+           if (choice.toLowerCase() === "yes") {
+               document.getElementById("mission").innerHTML = "The mission is aborted";
+               mission.style.color = 'red';
+               mission.style.fontWeight = 'bold';
+           }
+    }
+</script>
+<h2>Example of addListener Event </h2>
+<p>Click the following button to see the effect.</p>
+<button id="execute">Execute</button>
+<script>
+    let x = document.getElementById("execute");
+    x.addEventListener("click", onClickEvent);
+    x.addEventListener("mouseover", onMouseOver);
+    x.addEventListener("mouseout",onMouseOut);
+    function onClickEvent(){
+        document.getElementById("execute");
+        execute.style.backgroundColor = 'yellow';
+        window.alert("You have successfully completed this exercise");
+    }
+    function onMouseOver() {
+        document.getElementById("execute");
+        execute.style.color = 'green';
+    }
+    function onMouseOut() {
+        document.getElementById("execute");
+        execute.style.fontSize = '40px';
+        execute.style.font = 'Times new Roman';
+    }
+</script>
+<h2>Determination of a vowel or a consonant</h2>
+<p>Enter a string: <label><input type="text" id="string" name="word"></label></p>
+<p>Enter the index: <label><input type="number" id="index" name="number"></label></p>
+<button onclick="wordCheck()">Check the entry</button>
+<p id="result"></p>
+<script>
+    function wordCheck() {
+        let word = document.getElementById("string").value;
+        let index = document.getElementById("index").value;
+        let vowel = "AEIOUaeiou";
+        let i, character = "";
+        for (i = 0; i < word.length; i++) {
+            character = word[index];
+            if (vowel.indexOf(character) !== -1) {
+                document.getElementById('result').innerHTML = word[index] + " is a vowel"
+            } else {
+                document.getElementById('result').innerHTML = word[index]+ " is a consonant";
+            }
+        }
+    }
+</script>
+</body>
+</html>
