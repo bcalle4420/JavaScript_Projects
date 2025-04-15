@@ -8,9 +8,8 @@ let shoes, backpack, skiJacket, pants;
 //Travel planner lists choices
 console.log("========== Travel Planner ==========");
 console.log("You have a choice of two travel destinations for Spring Break:");
-console.log("     Touring the National Parks");
-console.log("     Skiing in Colorado");
-console.log(" ");
+console.log("\tTouring the National Parks");
+console.log("\tSkiing in Colorado\n");
 
 //lists prices of both options
 console.log("===== Basic Airfare and Hotel =====");
