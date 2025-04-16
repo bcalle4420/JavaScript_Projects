@@ -14,13 +14,11 @@ console.log("\tSkiing in Colorado\n");
 //lists prices of both options
 console.log("===== Basic Airfare and Hotel =====");
 console.log("Touring the National Parks: $1,054.00");
-console.log("Skiing in Colorado: $1,105.00");
-console.log(" ");
+console.log("Skiing in Colorado: $1,105.00\n");
 console.log("Please include up to $400 for accessories when planning your vacation budget.")
 
 //user defines budget
 let budget = prompt('What is your budget for your vacation? ');
-console.log(" ");
 
 //user selects option
 console.log("Where do you plan to travel for Spring Break?");
@@ -64,20 +62,18 @@ function choiceSelection() {
 
 //displays total price by calling function
 console.log("****************************************");
-console.log("       Costs for Spring Break");
+console.log("\tCosts for Spring Break");
 totalPrice();
 
 //function to determine price determined by user's choices
 function totalPrice() {
     if (choice === "t" || choice === "T") {
-        console.log("Touring the National Parks")
-        console.log("Hotel for four nights:         $400.00");
-        console.log("Airfare to Wyoming:            $646.00");
+        console.log("Touring the National Parks\nHotel for four nights:\t$400.00\nAirfare to Wyoming:\t$646.00");
         if (shoes === "y" || shoes === "Y") {
-            console.log("Item: Hiking shoes             $75.00")
+            console.log("Item: Hiking shoes\t$75.00")
         }
         if (backpack === "y" || backpack === "Y"){
-            console.log("Item: Backpack                 $40.00")
+            console.log("Item: Backpack\t\t$40.00")
         }
     }
     else if (choice === "s" || choice === "S") {
@@ -95,13 +91,11 @@ function totalPrice() {
 }
 function budgetCalculation() {
     if (budget >= price) {
-        console.log(`Total:                         $${price}`);
-        console.log();
-        console.log('Great! Enjoy your vacation!');
+        console.log(`Total:\t\t\t$${price}`);
+        console.log('\nGreat! Enjoy your vacation!');
     }
     else if (budget < price) {
-        console.log(`Total:                         $${price}`);
-        console.log();
-        console.log('You are over budget. Enjoy your stay-cation');
+        console.log(`Total:\t\t$${price}`);
+        console.log('\nYou are over budget. Enjoy your stay-cation');
     }
 }
